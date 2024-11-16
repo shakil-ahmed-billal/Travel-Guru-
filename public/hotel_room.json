@@ -1,0 +1,114 @@
+[
+    {
+      "id": 1,
+      "title": "Light bright airy stylish apt & safe peaceful stay",
+      "details": {
+        "guests": 4,
+        "bedrooms": 2,
+        "beds": 2,
+        "baths": 2,
+        "amenities": ["WiFi", "Air conditioning", "Kitchen"],
+        "cancellationPolicy": "Cancellation flexibility available"
+      },
+      "rating": {
+        "stars": 4.9,
+        "reviews": 120
+      },
+      "price": {
+        "amount": 34,
+        "currency": "USD",
+        "unit": "night"
+      },
+      "image": "https://i.ibb.co/L6ztdQ7/Leonardo-Kino-XL-make-a-5-star-hotel-room-image-1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Apartment in Lost Panorama",
+      "details": {
+        "guests": 4,
+        "bedrooms": 2,
+        "beds": 2,
+        "baths": 2,
+        "amenities": ["WiFi", "Air conditioning", "Kitchen"],
+        "cancellationPolicy": "Cancellation flexibility available"
+      },
+      "rating": {
+        "stars": 4.8,
+        "reviews": 95
+      },
+      "price": {
+        "amount": 52,
+        "currency": "USD",
+        "unit": "night"
+      },
+      "discountBadge": "750",
+      "image": "https://i.ibb.co/sJtkgLJ/Leonardo-Kino-XL-make-a-5-star-hotel-room-image-2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "AR Lounge & Pool (r&r + b&b)",
+      "details": {
+        "guests": 4,
+        "bedrooms": 2,
+        "beds": 2,
+        "baths": 2,
+        "amenities": ["WiFi", "Air conditioning", "Kitchen"],
+        "cancellationPolicy": "Cancellation flexibility available"
+      },
+      "rating": {
+        "stars": 4.9,
+        "reviews": 200
+      },
+      "price": {
+        "amount": 44,
+        "currency": "USD",
+        "unit": "night"
+      },
+      "image": "https://i.ibb.co/9h5Stmx/Leonardo-Kino-XL-make-a-5-star-hotel-room-image-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Modern Minimalist Suite with Ocean View",
+      "details": {
+        "guests": 3,
+        "bedrooms": 1,
+        "beds": 1,
+        "baths": 1,
+        "amenities": ["WiFi", "Pool", "Balcony"],
+        "cancellationPolicy": "Free cancellation within 24 hours"
+      },
+      "rating": {
+        "stars": 4.7,
+        "reviews": 80
+      },
+      "price": {
+        "amount": 60,
+        "currency": "USD",
+        "unit": "night"
+      },
+      "image": "https://i.ibb.co/Zhcsts7/12375.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Luxurious 5-Star Suite with Private Terrace",
+      "details": {
+        "guests": 2,
+        "bedrooms": 1,
+        "beds": 1,
+        "baths": 1,
+        "amenities": ["WiFi", "Private terrace", "Jacuzzi"],
+        "cancellationPolicy": "Flexible cancellation policy"
+      },
+      "rating": {
+        "stars": 5.0,
+        "reviews": 150
+      },
+      "price": {
+        "amount": 120,
+        "currency": "USD",
+        "unit": "night"
+      },
+      "image": "https://i.ibb.co/kcc7zxZ/Leonardo-Kino-XL-make-a-5-star-hotel-room-image-0.jpg"
+    }
+]
+  

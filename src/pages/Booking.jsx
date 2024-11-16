@@ -11,7 +11,7 @@ const Booking = () => {
                     </nav>
                 </header>
                 <main>
-                    <section className="grid grid-cols-2 justify-center items-center mt-40 ">
+                    <section className="grid grid-cols-2 justify-center items-center mt-44 ">
                         <div className="text-white mx-10">
                             <p className="text-8xl font-extrabold">Cox's bazar</p>
                             <p>Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds. North, sea turtles breed on nearby Sonadia Island.</p>
@@ -41,7 +41,7 @@ const Booking = () => {
                                     <input className="input input-bordered w-full" type="date" />
                                     </div>
                                 </label>
-                                <Link className="btn w-full bg-orange-400 mt-8 text-lg font-bold">Start Booking</Link>
+                                <Link to={'/service'} className="btn w-full bg-orange-400 mt-8 text-lg font-bold">Start Booking</Link>
                             </div>
                         </div>
                     </section>

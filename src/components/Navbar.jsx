@@ -5,12 +5,11 @@ import logo from '../assets/heroLogo.png'
 const Navbar = () => {
 
     const links = <>
-        <li><Link to={'/news'}>News</Link></li>
+        <li><Link to={'/service'}>Service</Link></li>
         <li><Link to={'/destination'}>Destination</Link></li>
         <li><Link to={'/blog'}>Blog</Link></li>
         <li><Link to={'/contact'}>Contact</Link></li>
     </>
-
     return (
         <div className="md:w-11/12 mx-auto">
             <div className="navbar text-white">
