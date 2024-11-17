@@ -21,6 +21,8 @@ const Register = () => {
         createNewAccount(email, password)
             .then(res => {
                 console.log(res.user);
+            }).catch(error=>{
+                alert(error.message)
             })
     }
 

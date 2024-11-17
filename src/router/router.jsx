@@ -7,12 +7,13 @@ import Booking from '../pages/Booking'
 import Service from '../pages/Service'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+import PrivateRoute from './PrivateRoute'
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
-        children:[
+        children: [
             {
                 path: '/',
                 element: <Home></Home>
@@ -25,21 +26,30 @@ const router = createBrowserRouter([
     },
     {
         path: '/service',
-        loader: ()=> fetch('./hotel_room.json'),
-        element: <Service></Service>
+        loader: () => fetch('./hotel_room.json'),
+        element: <PrivateRoute>
+            <Service></Service>
+        </PrivateRoute>
     },
     {
         path: '/login',
         element: <Login></Login>
     },
     {
-        path:"/register",
+        path: "/register",
         element: <Register></Register>
     },
     {
         path: '*',
         element: <Page404></Page404>
     }
-])
+ ],{ 
+    future: { v7_startTransition: true, 
+    v7_relativeSplatPath: true, 
+    v7_fetcherPersist: true, 
+    v7_normalizeFormMethod: true, 
+    v7_partialHydration: true, 
+    v7_skipActionErrorRevalidation: true, } 
+});
 
 export default router

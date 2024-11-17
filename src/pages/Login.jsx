@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
 import Navbar from '../components/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import logo from '../assets/heroLogo.png'
 
 
 const Login = () => {
 
-    const {loading , loginGoogle} = useContext(AuthContext)
-    console.log(loading);
+    const {loginGoogle , signInUser} = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+    console.log(location);
 
     const handleLogin = (event) =>{
         event.preventDefault()
@@ -16,13 +18,23 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email , password);
+        // signIn user firebase section
+        signInUser(email , password )
+        .then(res =>{
+            console.log(res.user);
+            navigate(location?.state? location.state : '/')
+        }).catch(error=>{
+            alert(error.message)
+        })
     }
 
     const handleGoogle = () =>{
         loginGoogle()
         .then(res=>{
             console.log(res.user);
+            navigate(location?.state? location.state : '/')
+        }).catch(error=>{
+            alert(error.message)
         })
     }
 
@@ -33,9 +45,9 @@ const Login = () => {
                 <form onSubmit={handleLogin} className="bg-gray-900 border-[4px] border-blue-900 rounded-2xl hover:border-blue-500 transition-all duration-200">
                     <div className="form-control mx-auto flex items-center space-y-4 py-16 px-12 font-semibold text-gray-500 flex-col">
                         <img src={logo} className='h-12 ' alt="" />
-                        <h1 className="text-white text-2xl">Sign in to Twitter</h1>
-                        <input className="w-full p-2 bg-blue-900 rounded-md border border-gray-700 focus:border-blue-700 hover:border-blue-500 transition-all duration-200" placeholder="Email" type="email" name="email" id />
-                        <input className="w-full p-2 bg-blue-900 rounded-md border border-gray-700 focus:border-blue-700 hover:border-blue-500 transition-all duration-200" placeholder="Password" type="password" name="password" id />
+                        <h1 className="text-white text-2xl">Sign in to Travel Guru</h1>
+                        <input className="w-full p-2 bg-blue-900 rounded-md border border-gray-700 focus:border-blue-700 hover:border-blue-500 transition-all duration-200" placeholder="Email" type="email" name="email" id required />
+                        <input className="w-full p-2 bg-blue-900 rounded-md border border-gray-700 focus:border-blue-700 hover:border-blue-500 transition-all duration-200" placeholder="Password" type="password" name="password" id required/>
                         <button className='w-full p-2 bg-gray-50 rounded-full font-bold text-gray-900 border-[4px] border-gray-700 hover:border-blue-500 transition-all duration-200'>Login</button>
                         <p> Don't have an account? <Link to={'/register'} className="font-semibold text-white hover:text-blue-500 transition-all duration-200" href>Sign up</Link></p>
                         {/* log in with google */}
