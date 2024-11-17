@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom"
 import logo from '../assets/heroLogo.png'
+import { to } from './../../node_modules/moment/src/lib/moment/to';
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import { FiUserCheck } from "react-icons/fi";
 
 
 const Navbar = () => {
 
+    const {user ,logOut} = useContext(AuthContext)
+
+    const handleSignOut = () =>{
+        logOut()
+    }
+
     const links = <>
         <li><Link to={'/service'}>Service</Link></li>
-        <li><Link to={'/destination'}>Destination</Link></li>
+        <li><Link to={'/booking'}>Destination</Link></li>
         <li><Link to={'/blog'}>Blog</Link></li>
         <li><Link to={'/contact'}>Contact</Link></li>
     </>
@@ -59,7 +69,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn text-lg font-bold">Login</a>
+                    {
+                        user&& user.email? <p className="flex items-center">{user.email} <button onClick={handleSignOut} className="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center text-xl ml-3"><FiUserCheck></FiUserCheck></button></p>
+                        :<Link to={'/login'} className="btn text-lg font-bold">Login</Link>
+                    }
                 </div>
             </div>
         </div>
